@@ -1,0 +1,98 @@
+.flex {
+  display: flex;
+}
+.flex > div:first-child {
+  width: 42%;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* style img */
+.flex > div:last-child {
+  width: 58%;
+  position: relative;
+  padding-top: 58%;
+}
+.flex > div:last-child img {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10%;
+}
+/* style cho chu he thong quan ly xep hang */
+.flex > div:last-child > div {
+  position: absolute;
+  top: 48%;
+  right: 0;
+  color: #FF7506;
+  padding-right: 3%;
+}
+.flex > div:last-child > div > p {
+  font-size: 1.9rem;
+  margin: 0;
+}
+.flex > div:last-child > div > h4 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FF7506;
+}
+/* Loginform start */
+.form > * {
+  width: 90%;
+}
+/* Loginform layout */
+.form > div:first-child {
+  text-align: center;
+  padding: 3rem 0;
+}
+.form > div {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.form > div > img {
+  max-height: 100%;
+}
+/* Loginform layout done */
+/* form layout */
+.form > form {
+  padding-top: 1rem;
+}
+.form > form > div {
+  display: flex;
+  flex-direction: column;
+}
+.form > form label::after {
+  content: "*";
+}
+.form > form > div input{
+  width: 100%;
+  outline: none;
+  border:  1.5px solid #D4D4D7;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.form > form > div.errorMess {
+  color: #E73F3F;
+}
+.inputGroup > div {
+  position: relative;
+}
+.inputGroup > div span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .form > * {
+    width: 70%;
+  }
+}
