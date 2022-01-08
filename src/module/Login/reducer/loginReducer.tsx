@@ -10,19 +10,6 @@ const loginReducer = createSlice({
   name:"login",
   initialState,
   reducers: {
-    // LOGIN_REQUEST: (state) => {
-    //   state.isloading = true;
-    //   state.error = false;
-    // },
-    // LOGIN_FAILURE: (state) => {
-    //   state.isloading = false;
-    //   state.error = true;
-    // },
-    // LOGIN_SUCCESS: (state, action) => {
-    //   state.isloading = false;
-    //   state.error = false;
-    //   state.data = action.payload
-    // },
   },
   extraReducers: (builder) => {
     builder

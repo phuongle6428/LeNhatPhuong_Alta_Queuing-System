@@ -23,46 +23,37 @@
   transform: translate(-50%, -50%);
   padding: 10%;
 }
-/* style cho chu he thong quan ly xep hang */
-.Layout > div:last-child > div {
-  position: absolute;
-  top: 48%;
-  right: 0;
-  color: #FF7506;
-  padding-right: 3%;
-}
-.Layout > div:last-child > div > p {
-  font-size: 2.3vw;
-  margin: 0;
-}
-.Layout > div:last-child > div > h4 {
-  font-size: 2.3vw;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #FF7506;
-}
-/* Loginform start */
-.loginForm > * {
+/* emailform start */
+.emailForm > * {
   width: 90%;
 }
-/* Loginform layout */
-.loginForm > div:first-child {
+/* emailform layout */
+.emailForm > div:first-child {
   text-align: center;
   padding: 3rem 0;
 }
-.loginForm > div {
+.emailForm > div:last-child {
   text-align: center;
   padding: 1.5rem 0;
 }
-.loginForm > div > img {
+.emailForm > div > img {
   max-height: 100%;
 }
-/* Loginform layout done */
+/* emailform layout done */
 /* form layout */
-.loginForm > form {
+.emailForm > form {
   padding-top: 1rem;
 }
-.loginForm .errorMess {
+.emailForm > form > div {
+  display: flex;
+  flex-direction: column;
+}
+.emailForm > form > div:first-child {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+.emailForm .errorMess {
   color: #FF9138;
   font-size: 0.9rem;
   flex-direction: row;
@@ -70,26 +61,9 @@
   cursor: pointer;
   transition: all 0.5s;
 }
-.loginForm .errorMess:hover {
-  color: #FF7506;
-}
-.loginForm .errorMess span {
-  margin-left: 0.3rem;
-}
-.inputGroup > div {
-  position: relative;
-}
-.inputGroup > div span {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%,-50%);
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.inputGroup > div span:hover {
-  color: #FF7506;
+.emailForm .buttonGroup button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 /* 992px 768px 1200px 576px */
 @media screen and (min-width: 992px) {
@@ -104,7 +78,7 @@
   .Layout > div:last-child img {
     height: 100%;
   }
-  .loginForm > * {
+  .emailForm > * {
     width: 70%;
   }
 }
