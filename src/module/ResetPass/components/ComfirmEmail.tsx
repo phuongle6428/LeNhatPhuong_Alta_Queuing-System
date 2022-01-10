@@ -38,7 +38,7 @@ export default function ComfirmEmail({ handleNext }: propType) {
           name="email"
           control={control}
           render={({ field: { onChange, value } }) =>
-          <InputC type="email" id='email' checkReq={true} onChange={onChange} value={value} errors={errors.email?.message}>Mật khẩu</InputC>}
+          <InputC type="email" id='email' checkReq={true} onChange={onChange} value={value} errors={errors.email?.message}>Vui lòng nhập email để đặt lại mật khẩu của bạn</InputC>}
         />
       </form>
       <div className={styles.buttonGroup}>

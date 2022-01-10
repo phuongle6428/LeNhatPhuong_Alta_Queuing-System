@@ -47,15 +47,20 @@
 }
 /* Loginform layout */
 .loginForm > div:first-child {
+  display: flex;
+  justify-content: center;
   text-align: center;
   padding: 3rem 0;
 }
-.loginForm > div {
+.loginForm > div:last-child {
   text-align: center;
   padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
 }
 .loginForm > div > img {
   max-height: 100%;
+  width: 40%;
 }
 /* Loginform layout done */
 /* form layout */
