@@ -34,7 +34,7 @@ function MyLoginForm() {
     resolver: yupResolver(schema)
   });
   const onSubmit = (data: formType) => {
-    dispatch(loginVerify(data)).unwrap().then(() => navigate("/Home"))
+    dispatch(loginVerify(data)).unwrap().then(() => navigate("/Dashboard"))
   };
   const navigateReset = <div className={styles.errorMess} onClick={() => { navigate("/Reset") }}>Quên mật khẩu?</div>
   return (

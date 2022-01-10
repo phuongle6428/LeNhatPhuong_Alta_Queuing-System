@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function NavigateUser() {
+export default function Device() {
   return (
     <div>
-      
+      Device
     </div>
   )
 }

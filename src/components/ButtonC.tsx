@@ -9,9 +9,10 @@ export default function ButtonC({ invert, children, ...props }: buttonProps) {
   return (
     <button
       className={invert ? "buttonInvert" : undefined}
+      style={{display:"flex", alignItems: "center", justifyContent: "space-evenly"}}
       {...props}
     >
-      {props.disabled ? <Spin indicator={antIcon} /> : children}</button>
+      {props.disabled ? <Spin indicator={antIcon} /> :children}</button>
   )
 }
 type buttonProps = {

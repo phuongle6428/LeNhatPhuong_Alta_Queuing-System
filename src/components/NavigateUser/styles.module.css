@@ -1,0 +1,41 @@
+.flex {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-right: 2rem;
+}
+.flex > div:first-child{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF2E7;
+  border-radius: 50%;
+  color: #FF9138;
+}
+.flex > div:last-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+.flex > div:last-child > div:last-child{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+.flex > div:last-child > div:last-child p {
+  margin: 0;
+}
+.flex > div:last-child > div:last-child p:first-child {
+  color: #7E7D88;
+  font-size: 0.75rem;
+}
+.flex > div:last-child > div:last-child p:last-child {
+  color: #535261;
+  font-size: 1rem;
+  font-weight: 700;
+}
