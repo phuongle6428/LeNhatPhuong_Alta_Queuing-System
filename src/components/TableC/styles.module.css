@@ -1,0 +1,9 @@
+.tableC tbody > tr:nth-child(2n-1) {
+  background-color: #FFF2E7;
+}
+.tableC thead > tr > th{
+  background-color: var(--bgColor);
+  color: white;
+  font-weight: 700;
+  border-right: 0.5px solid rgba(255, 255, 255, 0.4);
+}

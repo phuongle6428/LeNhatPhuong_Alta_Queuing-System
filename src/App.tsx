@@ -5,6 +5,7 @@ import Dashboard from './module/Dashboard/Dashboard'
 import ResetPass from './module/ResetPass/ResetPass';
 import MenuOutlet from './routeoutlets/MenuOutlet';
 import Device from './module/Device/Device';
+import UserProfile from './module/UserProfile/UserProfile';
 function App() {
   return (
     <HashRouter>
@@ -14,6 +15,7 @@ function App() {
         <Route element={<MenuOutlet/>}>
           <Route path="Dashboard" element={<Dashboard />}></Route>
           <Route path="Device"element={<Device/>}></Route>
+          <Route path="UserProfile"element={<UserProfile/>}></Route>
         </Route>
       </Routes>
     </HashRouter>

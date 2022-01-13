@@ -12,7 +12,7 @@ export default function NavigateMenu() {
       <NavLinkC to="/Number" iconMenu={<BsLayers />}> Cấp số</NavLinkC>
       <NavLinkC to="/Reports" iconMenu={<BsFileEarmarkBarGraph />}> Báo cáo</NavLinkC>
       <SubMenuC subTitle="Cài đặt hệ thống" iconMenu={<AiOutlineSetting />} iconExpand={<AiOutlineMore/>}>
-        <NavLinkC to="/Systems"> Quản lý vai trò</NavLinkC>
+        <NavLinkC to="/Systems/Roles"> Quản lý vai trò</NavLinkC>
         <NavLinkC to="/Systems/Accouts"> Quản lý tài khoản</NavLinkC>
         <NavLinkC to="/Systems/Diary"> Nhật ký người dùng</NavLinkC>
       </SubMenuC>

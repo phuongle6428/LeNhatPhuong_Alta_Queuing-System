@@ -1,0 +1,27 @@
+.label {
+  color: #282739;
+  font-weight: 600;
+  padding-bottom: 0.2rem;
+}
+/* .selectC {
+  border:1.5px solid #D4D4D7;
+} */
+.selectC:not([class~=ant-select-disabled]):hover [class~=ant-select-selector] {
+  border: 1.5px solid #D4D4D7 !important;
+}
+.selectC[class~=ant-select-open]:not([class~=ant-select-disabled]):not([class~=ant-select-customized-input]) > div[class~=ant-select-selector] {
+  border: 1.5px solid #FFAC6A !important
+}
+.selectC[class~=ant-select-focused]:not([class~=ant-select-disabled]):not([class~=ant-select-customized-input]) > [class~=ant-select-selector] {
+  border: 1.5px solid #D4D4D7 !important;
+  box-shadow: none !important;
+}
+.selectC > span[class~="ant-select-arrow"] {
+  color: var(--fontColor);
+}
+.selectC:not([class~=ant-select-customize-input]) > [class~=ant-select-selector] {
+  border: 1.5px solid #D4D4D7;
+}
+.dropdown [class~=ant-select-item-option-selected]{
+  background-color: #FFF2E7;
+}

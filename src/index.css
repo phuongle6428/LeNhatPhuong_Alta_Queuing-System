@@ -69,22 +69,3 @@ a {
 a:hover {
   color: white;
 }
-.menuNav {
-  display: flex;
-  padding: 0.25rem 2rem 0.25rem 0.5rem;
-  align-items: center;
-}
-.menuNav :nth-child(2){
-  padding: 0 0.5rem 0 0.5rem;
-}
-.menuNav:not(.menuNavSelect) {
-  color: #7E7D88;
-}
-.menuNav:not(.menuNavSelect):hover {
-  color: var(--fontColor);
-  background-color: var(--bgColorinvert);
-}
-.menuNavSelect {
-  color: #FFF2E7;
-  background-color: var(--selectColor)
-}

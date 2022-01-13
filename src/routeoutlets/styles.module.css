@@ -15,6 +15,9 @@
   background-color: #F6F6F6;
   flex-grow: 1;
   padding-bottom: 0.5rem;
+  padding: 1rem 1rem;
+}
+.menuOutlet > div:last-child > div:last-child {
   position: relative;
 }
 .logo {
@@ -30,16 +33,19 @@
   cursor: pointer;
 }
 .menuOutlet .userNav {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  z-index: 1;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 567px) {
   .menuOutlet > div:first-child {
     height: 100vh;
   }
   .menuOutlet > div:last-child {
-    padding-top: unset;
+    /* padding-top: unset; */
     height: 100vh;
   }
 }
