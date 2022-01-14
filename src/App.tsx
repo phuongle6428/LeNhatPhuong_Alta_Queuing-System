@@ -17,7 +17,11 @@ function App() {
         <Route path="/Reset" element={<ResetPass />}></Route>
         <Route element={<MenuOutlet />}>
           <Route path="Dashboard" element={<Dashboard />}></Route>
-          <Route path="Device" element={<Device />}></Route>
+          <Route path="Device" element={<Device />}>
+            {/* <Route path="DeviceAdd" element={<DeviceAdd />}></Route>
+            <Route path="DeviceDetail/:ProductID" element={<DeviceDetail />}></Route>
+            <Route path="DeviceUpdate/:ProductID" element={<DeviceUpdate />}></Route> */}
+          </Route>
           <Route path="Device/DeviceAdd" element={<DeviceAdd />}></Route>
           <Route path="Device/DeviceDetail/:ProductID" element={<DeviceDetail />}></Route>
           <Route path="Device/DeviceUpdate/:ProductID" element={<DeviceUpdate />}></Route>

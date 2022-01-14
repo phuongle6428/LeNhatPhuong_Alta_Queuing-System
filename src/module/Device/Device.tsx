@@ -2,84 +2,32 @@ import React, { useEffect, useRef, useState } from 'react'
 import SelectC, { Option } from '../../components/SelectC/SelectC';
 import TableC from '../../components/TableC/TableC';
 import styles from "./styles.module.css";
-import tableColumn from './Table/DeviceTable';
+import tableColumn from './table/DeviceTable';
 import { AiFillPlusSquare } from "react-icons/ai";
-import { useNavigate } from 'react-router-dom';
-const tableData = [
-  {
-    key: '1',
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
-    IPAddress: "192.168.1.10",
-    WorkingState: "Ngưng hoạt động",
-    ConnectStatus: "Mất kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
-    Detail: "Chi tiết",
-    Update: "Cập nhập",
-    ProductID: "12313"
-  },
-  {
-    key: '2',
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
-    IPAddress: "192.168.1.10",
-    WorkingState: "Hoạt động",
-    ConnectStatus: "Mất kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
-    Detail: "Chi tiết",
-    Update: "Cập nhập",
-    ProductID: "127675"
-  },
-  {
-    key: '3',
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
-    IPAddress: "192.168.1.10",
-    WorkingState: "Hoạt động",
-    ConnectStatus: "Kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
-    Detail: "Chi tiết",
-    Update: "Cập nhập",
-    ProductID: "1876575"
-  },
-  {
-    key: '4',
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
-    IPAddress: "192.168.1.10",
-    WorkingState: "Ngưng hoạt động",
-    ConnectStatus: "Kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
-    Detail: "Chi tiết",
-    Update: "Cập nhập",
-    ProductID: "87455"
-  },
-  {
-    key: '5',
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
-    IPAddress: "192.168.1.10",
-    WorkingState: "Hoạt động",
-    ConnectStatus: "Mất kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
-    Detail: "Chi tiết",
-    Update: "Cập nhập",
-    ProductID: "1675775"
-  },
-]
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../redux/hook';
+import { getDevice } from './actions';
+
 export default function Device() {
+  const location = useLocation()
+  const navigate = useNavigate()
+  const state = useAppSelector((state) => state.device)
+  const dispatch = useAppDispatch()
+  //Xu ly vi tri them thiet bi
   const ref = useRef<HTMLDivElement>(null)
   const addRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
+    dispatch(getDevice())
     if(ref.current && addRef.current) {
       const domRect  = ref.current.getBoundingClientRect()
       addRef.current.style.top = `${domRect.y + ref.current.scrollTop }px`
+      addRef.current.style.display = "flex"
     }
-  }, [])
-  const navigate = useNavigate()
+  },[])
+  //Filter data
   const [WorkingStateFilter, setWorkingStateFilter] = useState<WorkingStateType>("Tất cả")
   const [ConnectStatusType, setConnectStatusType] = useState<ConnectStatusType>("Tất cả")
-  const dataAfterFirstFilter = tableData.filter((item) => {
+  const dataAfterFirstFilter = state.data.filter((item) => {
     if (WorkingStateFilter === "Tất cả") {
       return true
     } else return item.WorkingState === WorkingStateFilter
@@ -89,6 +37,10 @@ export default function Device() {
       return true
     } else return item.ConnectStatus === ConnectStatusType
   })
+  //Return Outlet
+  // if(location.pathname !== "/Device") {
+  //   return <Outlet/>
+  // }
   return (
     <>
     <div className={styles.device}>
