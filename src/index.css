@@ -63,9 +63,9 @@ button.buttonInvert {
   color: var(--bgColor);
   border: 1px solid var(--bgColor);
 }
-a {
+/* a {
   color: #7E7D88;
-}
-a:hover {
+} */
+/* a:hover {
   color: white;
-}
+} */

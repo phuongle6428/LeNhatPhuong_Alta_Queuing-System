@@ -2,7 +2,7 @@ import { Table } from 'antd'
 import styles from "./styles.module.css";
 import React from 'react'
 
-export default function TableC({...rest }: propsType) {
+function TableC({...rest }: propsType) {
   return (
     <>
       <Table
@@ -13,3 +13,4 @@ export default function TableC({...rest }: propsType) {
   )
 }
 type propsType = React.ComponentProps<typeof Table>
+export default React.memo(TableC)

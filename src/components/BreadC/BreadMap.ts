@@ -11,6 +11,21 @@ const patharray: Array<PathType> = [
     prefix: "Thiết bị"
   },
   {
+    pathName: "DeviceDetail",
+    name: "Chi tiết thiết bị",
+    path: "/DeviceDetail",
+  },
+  {
+    pathName: "DeviceUpdate",
+    name: "Cập nhập thiết bị",
+    path: "/DeviceUpdate",
+  },
+  {
+    pathName: "DeviceAdd",
+    name: "Thêm thiết bị",
+    path: "/DeviceAdd",
+  },
+  {
     pathName: "UserProfile",
     name: "Thông tin cá nhân",
     path: "/UserProfile",

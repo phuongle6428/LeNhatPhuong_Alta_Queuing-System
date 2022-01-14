@@ -18,6 +18,9 @@
   color: #FFF2E7;
   background-color: var(--selectColor)
 }
+.menuNavSelect:hover {
+  color: #FFF2E7;
+}
 .subMenu {
   position: relative;
   color: #7E7D88;

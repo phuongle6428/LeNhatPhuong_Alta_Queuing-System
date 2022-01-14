@@ -1,12 +1,53 @@
-.divice > div:first-child {
+.device {
+  padding-right: 2rem;
+}
+.device > div:first-child {
   color: var(--fontColor);
   font-size: 1.5rem;
   padding: 0.75rem 0;
   font-weight: 700;
 }
-.divice > div:nth-child(2) {
+.device > div:nth-child(2) {
   display: flex;
 }
-.divice > div:nth-child(2) > [class=select]{
+.device > div:nth-child(2) > [class=select]{
   padding-right: 1rem;
+}
+.ServiceUsed {
+  position: relative;
+}
+.More {
+  position: absolute;
+  width: 140%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  white-space:normal !important;
+  border: 1px solid #FFC89B;
+  border-radius: 8px;
+  min-height: 100%;
+  overflow: visible !important;
+  padding: 0 16px;
+}
+.Add {
+  position: absolute;
+  right: 0;
+  width: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bgColorinvert);
+  padding: 0.5rem 0.25rem;
+  color: var(--bgColor);
+  box-shadow: 0px 0px 6px #E7E9F2;
+}
+.Add > svg {
+  font-size: 1.5rem;
+  border-radius: 25px;
+}
+.Add > span {
+  font-size: 0.875rem;
+  font-weight: 600;
 }

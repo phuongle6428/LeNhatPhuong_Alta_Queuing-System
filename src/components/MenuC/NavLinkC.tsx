@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 export default function NavLinkC({ to, children, iconMenu}: propType) {
   return (
     <NavLink
-      end
+      // end
       to={to}
       className={({ isActive }) => isActive ? `${styles.menuNavSelect} ${styles.menuNav}` : `${styles.menuNav}`}
     >

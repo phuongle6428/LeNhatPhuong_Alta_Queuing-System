@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  padding-right: 2rem;
+  /* padding-right: 2rem; */
 }
 .flex > div:first-child > div:first-child{
   width: 2rem;
