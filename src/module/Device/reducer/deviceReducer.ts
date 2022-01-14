@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit"
 import { type } from "os"
 import { getDevice } from "../actions"
 
-const tableData:dataType = [
+const tableData:Array<deviceType> = [
   {
     key: 1,
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
+    DeviceCode: 'KIO_01',
+    DeviceName: "Kiosk",
     IPAddress: "192.168.1.10",
     WorkingState: "Ngưng hoạt động",
     ConnectStatus: "Mất kết nối",
@@ -17,8 +17,8 @@ const tableData:dataType = [
   },
   {
     key: 2,
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
+    DeviceCode: 'KIO_01',
+    DeviceName: "Kiosk",
     IPAddress: "192.168.1.10",
     WorkingState: "Hoạt động",
     ConnectStatus: "Mất kết nối",
@@ -29,8 +29,8 @@ const tableData:dataType = [
   },
   {
     key: 3,
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
+    DeviceCode: 'KIO_01',
+    DeviceName: "Kiosk",
     IPAddress: "192.168.1.10",
     WorkingState: "Hoạt động",
     ConnectStatus: "Kết nối",
@@ -41,8 +41,8 @@ const tableData:dataType = [
   },
   {
     key: 4,
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
+    DeviceCode: 'KIO_01',
+    DeviceName: "Kiosk",
     IPAddress: "192.168.1.10",
     WorkingState: "Ngưng hoạt động",
     ConnectStatus: "Kết nối",
@@ -53,8 +53,8 @@ const tableData:dataType = [
   },
   {
     key: 5,
-    DiviceCode: 'KIO_01',
-    DiviceName: "Kiosk",
+    DeviceCode: 'KIO_01',
+    DeviceName: "Kiosk",
     IPAddress: "192.168.1.10",
     WorkingState: "Hoạt động",
     ConnectStatus: "Mất kết nối",
@@ -72,7 +72,9 @@ const initialState:stateType = {
 const deviceReducer = createSlice({
   name: "device",
   initialState,
-  reducers:{},
+  reducers:{
+
+  },
   extraReducers: (builder) => {
     builder
     .addCase(getDevice.pending, (state) => {
@@ -86,26 +88,27 @@ const deviceReducer = createSlice({
     })
     .addCase(getDevice.rejected, (state) => {
       state.isLoading = true;
-      state.error = ""
+      state.error = "Error"
     })
   }
 })
 export default deviceReducer
-export type {dataType}
+export type {deviceType}
 type stateType = {
   isLoading: boolean
   error: string,
-  data: dataType
+  data: Array<deviceType>
 }
-type dataType = Array<{
+type deviceType = {
   key: number,
-  DiviceCode: string,
-  DiviceName: string,
+  DeviceCode: string,
+  DeviceName: string,
   IPAddress: string,
   WorkingState: string,
   ConnectStatus: string,
   ServiceUsed: string,
   Detail: string,
   Update: string,
-  ProductID: number
-}>
+  ProductID: number,
+  UserName?: string
+}

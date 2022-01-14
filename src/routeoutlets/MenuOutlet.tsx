@@ -17,13 +17,11 @@ export default function MenuOutlet() {
         <div style={{ marginTop: "auto" }}><ButtonC invert onClick={() => { navigation("/") }}> <BsBoxArrowRight /> <span>Đăng xuất</span></ButtonC></div>
       </div>
       <div>
-        <div>
-          <div className={styles.userNav}>
-            <BreadC />
-            <NavigateUser />
-          </div>
-          <Outlet />
+        <div className={styles.userNav}>
+          <BreadC />
+          <NavigateUser />
         </div>
+        <Outlet />
       </div>
     </div>
   )

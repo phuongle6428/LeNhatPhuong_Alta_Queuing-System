@@ -12,14 +12,13 @@
   margin-top: auto;
 }
 .menuOutlet > div:last-child {
+  display: flex;
+  flex-direction: column;
   background-color: #F6F6F6;
   flex-grow: 1;
   padding: 1rem 4rem 1rem 1rem;
   position: relative;
 }
-/* .menuOutlet > div:last-child > div:last-child {
-  position: relative;
-} */
 .logo {
   padding-top: 60%;
   position: relative;
