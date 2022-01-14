@@ -42,11 +42,11 @@ const handleClick = (e: React.MouseEvent) => {
 const tableColumn = [
   {
     title: 'Mã thiết bị',
-    dataIndex: 'DiviceCode',
+    dataIndex: 'DeviceCode',
   },
   {
     title: 'Tên thiết bị',
-    dataIndex: 'DiviceName',
+    dataIndex: 'DeviceName',
   },
   {
     title: 'Địa chỉ IP',
