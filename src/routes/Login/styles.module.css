@@ -83,21 +83,11 @@
 .loginForm .errorMess span {
   margin-left: 0.3rem;
 }
-.inputGroup > div {
-  position: relative;
+.loginForm > form > * {
+  font-size: 1.125rem;
+  color: #37474F;
 }
-.inputGroup > div span {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%,-50%);
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.inputGroup > div span:hover {
-  color: #FF7506;
-}
+
 /* 992px 768px 1200px 576px */
 @media screen and (min-width: 992px) {
   .Layout > div:first-child {

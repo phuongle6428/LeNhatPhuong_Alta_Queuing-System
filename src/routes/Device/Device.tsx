@@ -9,7 +9,6 @@ import { useAppDispatch, useAppSelector } from '../../redux/hook';
 import { getDevice } from './actions';
 
 export default function Device() {
-  const location = useLocation()
   const navigate = useNavigate()
   const state = useAppSelector((state) => state.device)
   const dispatch = useAppDispatch()
@@ -37,13 +36,9 @@ export default function Device() {
       return true
     } else return item.ConnectStatus === ConnectStatusType
   })
-  //Return Outlet
-  // if(location.pathname !== "/Device") {
-  //   return <Outlet/>
-  // }
   return (
     <>
-    <div className={styles.device}>
+    <div className={styles.device} style={{paddingRight: "2rem"}}>
       <div>Danh sách thiết bị</div>
       <div>
         <div className='select'>
@@ -62,7 +57,7 @@ export default function Device() {
             onChange={(value) => { setConnectStatusType((state) => state = value as ConnectStatusType) }}
             label='Trạng thái kết nối'
             defaultValue="Tất cả"
-            style={{ width: "14rem" }}>
+            style={{ width: "14rem"}}>
             <Option value="Tất cả">Tất cả</Option>
             <Option value="Kết nối">Kết nối</Option>
             <Option value="Mất kết nối">Mất kết nối</Option>

@@ -11,6 +11,7 @@ export default function InputC({ id,type,errors,children,checkReq, ...rest }: pr
     setshowPass(!showPass)
   }
   return (
+    <>
     <div className={styles.inputGroup}>
       <label htmlFor={id} className={checkReq?styles.labelReq: undefined}>{children}</label>
       <div>
@@ -19,6 +20,7 @@ export default function InputC({ id,type,errors,children,checkReq, ...rest }: pr
       </div>
       <p style={{ color: "red", fontSize: "0.8rem" }}>{errors}</p>
     </div>
+    </>
   )
 }
 type propsType = {

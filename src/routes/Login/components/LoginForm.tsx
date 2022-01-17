@@ -45,7 +45,7 @@ function MyLoginForm() {
           name="username"
           control={control}
           render={({ field: { onChange, value } }) =>
-          <InputC type="text" id='username' onChange={onChange} value={value} errors={errors.username?.message}>Tên đăng nhập</InputC>}
+          <InputC type="text" id='username' checkReq onChange={onChange} value={value} errors={errors.username?.message}>Tên đăng nhập</InputC>}
         />
         <Controller
           name="password"

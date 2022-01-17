@@ -14,6 +14,9 @@ const tableData:Array<deviceType> = [
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 12313,
+    DeviceType: "Kiosk",
+    Password: "CMS",
+    UserName: "xxx"
   },
   {
     key: 2,
@@ -26,6 +29,9 @@ const tableData:Array<deviceType> = [
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 127675,
+    DeviceType: "Kiosk",
+    Password: "CMS",
+    UserName: "xW@x"
   },
   {
     key: 3,
@@ -38,6 +44,9 @@ const tableData:Array<deviceType> = [
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 1876575,
+    DeviceType: "Display counter",
+    Password: "CMS",
+    UserName: "x!@#asdw"
   },
   {
     key: 4,
@@ -50,6 +59,9 @@ const tableData:Array<deviceType> = [
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 87455,
+    DeviceType: "Display counter",
+    Password: "CMS",
+    UserName: "xx873U"
   },
   {
     key: 5,
@@ -62,6 +74,9 @@ const tableData:Array<deviceType> = [
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 1675775,
+    DeviceType: "Kiosk",
+    Password: "CMS",
+    UserName: "xPINYW863"
   },
 ]
 const initialState:stateType = {
@@ -104,11 +119,13 @@ type deviceType = {
   DeviceCode: string,
   DeviceName: string,
   IPAddress: string,
-  WorkingState: string,
-  ConnectStatus: string,
+  WorkingState: "Hoạt động" | "Ngưng hoạt động",
+  ConnectStatus:"Kết nối" | "Mất kết nối",
   ServiceUsed: string,
   Detail: string,
   Update: string,
   ProductID: number,
-  UserName?: string
+  UserName: string,
+  DeviceType: "Kiosk" | "Display counter",
+  Password: string
 }

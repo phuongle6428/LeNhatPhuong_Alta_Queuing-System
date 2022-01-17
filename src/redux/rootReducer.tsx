@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import deviceReducer from "../module/Device/reducer/deviceReducer";
-import loginReducer from "../module/Login/reducer/loginReducer";
+import deviceReducer from "../routes/Device/reducer/deviceReducer";
+import loginReducer from "../routes/Login/reducer/loginReducer";
 
 const rootReducer = combineReducers({
   login: loginReducer.reducer,

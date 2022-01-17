@@ -10,7 +10,7 @@ export default function DeviceDetail() {
   })
   return (
     <>
-      <div className={styles.deviceDetail}>
+      <div className={styles.device}>
         <div>Quản lý thiết bị</div>
         <div className={styles.detailContain}>
           <div>Thông tin thiết bị</div>
@@ -18,9 +18,9 @@ export default function DeviceDetail() {
             <div><span>Mã thiết bị:</span>{data[0].DeviceCode}</div>
             <div><span>Loại thiết bị:</span>{data[0].DeviceName}</div>
             <div><span>Tên thiết bị:</span>{data[0].DeviceName}</div>
-            <div><span>Tên đăng nhập:</span>{data[0].UserName}XXXX</div>
+            <div><span>Tên đăng nhập:</span>{data[0].UserName}</div>
             <div><span>Địa chỉ IP:</span>{data[0].IPAddress}</div>
-            <div><span>Mật khẩu:</span>{data[0].DeviceCode}</div>
+            <div><span>Mật khẩu:</span>{data[0].Password}</div>
             <div><span>Dịch vụ sử dụng:</span>{data[0].ServiceUsed}</div>
           </div>
         </div>
