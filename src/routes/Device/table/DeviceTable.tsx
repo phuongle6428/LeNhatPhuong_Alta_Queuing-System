@@ -77,7 +77,7 @@ const tableColumn = [
   {
     title: 'Dịch vụ sử dụng',
     dataIndex: 'ServiceUsed',
-    render: (text: string) => <div onClick={(e) => handleClick(e)} style={{ maxWidth: "9rem" }}><div style={{ ...style.Ellipsis, whiteSpace: "nowrap", }}>{text}</div><div style={style.Click}>Xem thêm</div></div>,
+    render: (array: Array<string>) => <div onClick={(e) => handleClick(e)} style={{ maxWidth: "9rem" }}><div style={{ ...style.Ellipsis, whiteSpace: "nowrap", }}>{array.join(", ")}</div><div style={style.Click}>Xem thêm</div></div>,
     className: "ServiceUsed"
   },
   {

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { type } from "os"
-import { getDevice } from "../actions"
+import { getDevice, updateDevice } from "../actions"
 
 const tableData:Array<deviceType> = [
   {
@@ -10,7 +10,7 @@ const tableData:Array<deviceType> = [
     IPAddress: "192.168.1.10",
     WorkingState: "Ngưng hoạt động",
     ConnectStatus: "Mất kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
+    ServiceUsed: ["Khám tim mạch", "Khám mắt"],
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 12313,
@@ -25,7 +25,7 @@ const tableData:Array<deviceType> = [
     IPAddress: "192.168.1.10",
     WorkingState: "Hoạt động",
     ConnectStatus: "Mất kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
+    ServiceUsed: ["Khám tim mạch", "Khám mắt"],
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 127675,
@@ -40,7 +40,7 @@ const tableData:Array<deviceType> = [
     IPAddress: "192.168.1.10",
     WorkingState: "Hoạt động",
     ConnectStatus: "Kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
+    ServiceUsed: ["Khám tim mạch", "Khám mắt"],
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 1876575,
@@ -55,7 +55,7 @@ const tableData:Array<deviceType> = [
     IPAddress: "192.168.1.10",
     WorkingState: "Ngưng hoạt động",
     ConnectStatus: "Kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
+    ServiceUsed: ["Khám tim mạch", "Khám mắt"],
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 87455,
@@ -70,7 +70,7 @@ const tableData:Array<deviceType> = [
     IPAddress: "192.168.1.10",
     WorkingState: "Hoạt động",
     ConnectStatus: "Mất kết nối",
-    ServiceUsed: "Khám tim mạch, khám mắt",
+    ServiceUsed: ["Khám tim mạch", "Khám mắt"],
     Detail: "Chi tiết",
     Update: "Cập nhập",
     ProductID: 1675775,
@@ -105,6 +105,16 @@ const deviceReducer = createSlice({
       state.isLoading = true;
       state.error = "Error"
     })
+    .addCase(updateDevice.fulfilled, (state,action) => {
+      console.log(action)
+      state.isLoading = false;
+      state.error = "";
+      state.data.forEach((item,index) => {
+        if (item.ProductID === action.payload.ProductID) {
+          state.data[index] = {...action.payload}
+        } 
+      })
+    })
   }
 })
 export default deviceReducer
@@ -121,7 +131,7 @@ type deviceType = {
   IPAddress: string,
   WorkingState: "Hoạt động" | "Ngưng hoạt động",
   ConnectStatus:"Kết nối" | "Mất kết nối",
-  ServiceUsed: string,
+  ServiceUsed: Array<string>,
   Detail: string,
   Update: string,
   ProductID: number,

@@ -4,7 +4,7 @@ import TableC from '../../components/TableC/TableC';
 import styles from "./styles.module.css";
 import tableColumn from './table/DeviceTable';
 import { AiFillPlusSquare } from "react-icons/ai";
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../redux/hook';
 import { getDevice } from './actions';
 
@@ -43,7 +43,7 @@ export default function Device() {
       <div>
         <div className='select'>
           <SelectC
-            onChange={(value) => { setWorkingStateFilter((state) => state = value as WorkingStateType) }}
+            onChange={(value) => { setWorkingStateFilter((Wstate) => Wstate = value as WorkingStateType) }}
             label='Trạng thái hoạt động'
             defaultValue="Tất cả"
             style={{ width: "14rem" }}>
@@ -54,7 +54,7 @@ export default function Device() {
         </div>
         <div className='select'>
           <SelectC
-            onChange={(value) => { setConnectStatusType((state) => state = value as ConnectStatusType) }}
+            onChange={(value) => { setConnectStatusType((Cstate) => Cstate = value as ConnectStatusType) }}
             label='Trạng thái kết nối'
             defaultValue="Tất cả"
             style={{ width: "14rem"}}>

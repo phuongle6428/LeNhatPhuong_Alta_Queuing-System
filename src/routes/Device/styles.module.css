@@ -115,7 +115,19 @@
   color: #282739 !important;
   font-weight: 600;
 }
+.updateContain > form > *:last-child{
+  width: 100%;
+}
 .updateContain > form label::after{
   content: "*";
   color: red;
+}
+.device [class~=buttonHolder] {
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+  justify-content: center;
+}
+.device [class~=buttonHolder] > button {
+  margin: 0 1rem;
 }

@@ -16,5 +16,5 @@ export default function ButtonC({ invert, children, ...props }: buttonProps) {
   )
 }
 type buttonProps = {
-  invert: boolean
+  invert?: boolean
 } & React.ComponentProps<"button">
