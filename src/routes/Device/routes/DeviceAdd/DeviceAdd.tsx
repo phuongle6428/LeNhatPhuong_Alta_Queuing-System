@@ -8,7 +8,7 @@ import styles from "./../../styles.module.css";
 import InputC from '../../../../components/InputC/InputC';
 import SelectC, { Option, tagRender } from '../../../../components/SelectC/SelectC';
 import ButtonC from '../../../../components/ButtonC';
-import { updateDevice } from '../../actions';
+import { addDevice } from '../../actions';
 const schema = yup.object({
   DeviceCode: yup.string(),
   DeviceName: yup.string(),
@@ -31,6 +31,7 @@ export default function DeviceAdd() {
     resolver: yupResolver(schema)
   });
   const onSubmit = (formdata: ReturnType<typeof getValues>) => {
+    dispatch(addDevice(formdata)).then(()=>{navigate("/Device")})
   };
   return (
     <>

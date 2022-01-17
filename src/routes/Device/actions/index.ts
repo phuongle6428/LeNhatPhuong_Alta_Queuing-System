@@ -9,11 +9,18 @@ const getDevice = createAsyncThunk("device/getAll", async () => {
   return await promise
 })
 const updateDevice = createAsyncThunk("device/update", async (formdata: deviceType) => {
-  //fake get data from server
+  //fake put data
+  const promise:Promise<deviceType> = new Promise((resolve,reject) => {
+    setTimeout(()=>resolve(formdata),1000)
+  })
+  return await promise
+})
+const addDevice = createAsyncThunk("device/add", async (formdata: any) => {
+  //fake ...
   const promise:Promise<deviceType> = new Promise((resolve,reject) => {
     setTimeout(()=>resolve(formdata),1000)
   })
   return await promise
 })
 
-export {getDevice, updateDevice}
+export {getDevice, updateDevice,addDevice}

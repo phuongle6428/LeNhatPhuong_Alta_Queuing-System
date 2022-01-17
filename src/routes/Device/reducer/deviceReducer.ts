@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { type } from "os"
-import { getDevice, updateDevice } from "../actions"
+import { addDevice, getDevice, updateDevice } from "../actions"
 
 const tableData:Array<deviceType> = [
   {
@@ -106,7 +106,6 @@ const deviceReducer = createSlice({
       state.error = "Error"
     })
     .addCase(updateDevice.fulfilled, (state,action) => {
-      console.log(action)
       state.isLoading = false;
       state.error = "";
       state.data.forEach((item,index) => {
@@ -114,6 +113,11 @@ const deviceReducer = createSlice({
           state.data[index] = {...action.payload}
         } 
       })
+    })
+    .addCase(addDevice.fulfilled, (state,action) => {
+      console.log(action)
+      state.isLoading = false;
+      state.error = "";
     })
   }
 })
