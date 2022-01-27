@@ -5,7 +5,7 @@ import React, { useRef, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form';
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import styles from './../styles.module.css'
-import ButtonC from '../../../components/ButtonC';
+import ButtonC from '../../../components/ButtinC/ButtonC';
 import { useNavigate } from 'react-router-dom';
 import InputC from '../../../components/InputC/InputC';
 

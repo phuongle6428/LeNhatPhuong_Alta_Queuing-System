@@ -4,7 +4,7 @@ import NavigateMenu from '../components/NavigateMenu/NavigateMenu'
 import NavigateUser from '../components/NavigateUser/NavigateUser'
 import styles from "./styles.module.css"
 import img from "./../images/Logoalta.png"
-import ButtonC from '../components/ButtonC'
+import ButtonC from '../components/ButtinC/ButtonC'
 import { BsBoxArrowRight } from "react-icons/bs";
 import BreadC from '../components/BreadC/BreadC'
 export default function MenuOutlet() {

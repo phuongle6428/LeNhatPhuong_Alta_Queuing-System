@@ -10,6 +10,8 @@ import DeviceAdd from './routes/Device/routes/DeviceAdd/DeviceAdd';
 import DeviceDetail from './routes/Device/routes/DeviceDetail/DeviceDetail';
 import DeviceUpdate from './routes/Device/routes/DeviceUpdate/DeviceUpdate';
 import DeviceOutlet from './routeoutlets/DeviceOutlet';
+import ServiceOutlet from './routeoutlets/ServiceOutlet';
+import Services from './routes/Services/Services';
 function App() {
   return (
     <HashRouter>
@@ -17,6 +19,7 @@ function App() {
         <Route path="/" element={<Login />}></Route>
         <Route path="/Reset" element={<ResetPass />}></Route>
         <Route element={<MenuOutlet />}>
+          <Route path="UserProfile" element={<UserProfile />}></Route>
           <Route path="Dashboard" element={<Dashboard />}></Route>
           <Route path="Device" element={<DeviceOutlet />}>
             <Route index element={<Device />}></Route>
@@ -24,7 +27,10 @@ function App() {
             <Route path="DeviceDetail/:ProductID" element={<DeviceDetail />}></Route>
             <Route path="DeviceUpdate/:ProductID" element={<DeviceUpdate />}></Route>
           </Route>
-          <Route path="UserProfile" element={<UserProfile />}></Route>
+
+          <Route path="Service" element={<ServiceOutlet />}>
+            <Route index element={<Services />}></Route>
+          </Route>
         </Route>
       </Routes>
     </HashRouter>

@@ -7,7 +7,7 @@ import { useAppDispatch, useAppSelector } from '../../../../redux/hook'
 import styles from "./../../styles.module.css";
 import InputC from '../../../../components/InputC/InputC';
 import SelectC, { Option, tagRender } from '../../../../components/SelectC/SelectC';
-import ButtonC from '../../../../components/ButtonC';
+import ButtonC from '../../../../components/ButtinC/ButtonC';
 import { updateDevice } from '../../actions';
 
 const schema = yup.object({

@@ -4,7 +4,7 @@ import img from './../../../images/Logoalta.png'
 import React, { useRef } from 'react'
 import { Controller, useForm } from 'react-hook-form';
 import styles from './../styles.module.css'
-import ButtonC from '../../../components/ButtonC';
+import ButtonC from '../../../components/ButtinC/ButtonC';
 import { useNavigate } from 'react-router-dom';
 import InputC from '../../../components/InputC/InputC';
 

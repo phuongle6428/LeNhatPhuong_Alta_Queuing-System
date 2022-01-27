@@ -7,7 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useAppDispatch, useAppSelector } from '../../../redux/hook';
 import { loginVerify } from '../actions';
-import ButtonC from '../../../components/ButtonC';
+import ButtonC from '../../../components/ButtinC/ButtonC';
 import { useNavigate } from "react-router-dom";
 import InputC from '../../../components/InputC/InputC';
 

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { type } from "os"
 import { addDevice, getDevice, updateDevice } from "../actions"
 
 const tableData:Array<deviceType> = [
@@ -115,7 +114,6 @@ const deviceReducer = createSlice({
       })
     })
     .addCase(addDevice.fulfilled, (state,action) => {
-      console.log(action)
       state.isLoading = false;
       state.error = "";
     })

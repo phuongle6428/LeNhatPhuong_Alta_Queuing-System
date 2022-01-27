@@ -5,18 +5,15 @@ import styles from "./styles.module.css";
 import tableColumn from './table/DeviceTable';
 import { AiFillPlusSquare } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../redux/hook';
-import { getDevice } from './actions';
+import { useAppSelector } from '../../redux/hook';
 
 export default function Device() {
   const navigate = useNavigate()
   const state = useAppSelector((state) => state.device)
-  const dispatch = useAppDispatch()
   //Xu ly vi tri them thiet bi
   const ref = useRef<HTMLDivElement>(null)
   const addRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    dispatch(getDevice())
     if(ref.current && addRef.current) {
       const domRect  = ref.current.getBoundingClientRect()
       addRef.current.style.top = `${domRect.y + ref.current.scrollTop }px`

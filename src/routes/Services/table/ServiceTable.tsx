@@ -41,16 +41,16 @@ const handleClick = (e: React.MouseEvent) => {
 }
 const tableColumn = [
   {
-    title: 'Mã thiết bị',
-    dataIndex: 'DeviceCode',
+    title: 'Mã dịch vụ',
+    dataIndex: 'ServiceCode',
   },
   {
-    title: 'Tên thiết bị',
-    dataIndex: 'DeviceName',
+    title: 'Tên dịch vụ',
+    dataIndex: 'ServiceName',
   },
   {
-    title: 'Địa chỉ IP',
-    dataIndex: 'IPAddress',
+    title: 'Mô tả',
+    dataIndex: 'Description',
   },
   {
     title: 'Trạng thái hoạt động',
@@ -62,23 +62,6 @@ const tableColumn = [
         return <div style={{ display: "flex", alignItems: "center" }}><span style={style.IconGreen}></span><span>{state}</span></div>
       }
     }
-  },
-  {
-    title: 'Trạng thái kết nối',
-    dataIndex: 'ConnectStatus',
-    render: (state: "Mất kết nối" | "Kết nối") => {
-      if (state === "Mất kết nối") {
-        return <div style={{ display: "flex", alignItems: "center" }}><span style={style.IconRed}></span><span>{state}</span></div>
-      } else {
-        return <div style={{ display: "flex", alignItems: "center" }}><span style={style.IconGreen}></span><span>{state}</span></div>
-      }
-    }
-  },
-  {
-    title: 'Dịch vụ sử dụng',
-    dataIndex: 'ServiceUsed',
-    render: (array: Array<string>) => <div onClick={(e) => handleClick(e)} style={{ maxWidth: "9rem" }}><div style={{ ...style.Ellipsis, whiteSpace: "nowrap", }}>{array.join(", ")}</div><div style={style.Click}>Xem thêm</div></div>,
-    className: "ServiceUsed"
   },
   {
     title: '',
